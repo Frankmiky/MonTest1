@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Icloud</title>
+    	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"/>
+    	<script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
+	 	  <script type="text/javascript" charset="utf-8" src="capture.js"></script>
+    	<link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+ 
+  <body>
+   <!-- menü Seite -->
+	<div data-role="page" id="menue">
+  
+		<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+			<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext">Dieser Text wird nicht angezeigt.</a>
+			<h1>Menue</h1>
+		</div>
+    
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-filter="false">
+			    <li><a href="#" onclick="capturePhotoWithFile();">Photo File</a></li>
+			    <li><a href="#" onclick="getPhoto(pictureSource.PHOTOLIBRARY);" rel="external">Photo Album</a></li>
+			    <li><a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">Photo Library</a></li>
+			</ul>
+      		<img style="display:none;width:100px;height:100px;" id="smallImage" src="" />
+      		<img style="display:none;" id="largeImage" src="" />
+		</div>	
+
+		<div data-role="footer" data-id="footernav" data-tap-toggle="true" data-position="fixed" data-theme="b">
+			<div data-role="navbar" data-theme="b">
+
+				<ul>    
+					<li><a href="index.html" data-iconpos="left" data-icon="home" data-role="button">HOME</a></li>
+					<li><a href="hilfe.html" data-iconpos="left" data-role="button">HILFE</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+  </body>
+</html>

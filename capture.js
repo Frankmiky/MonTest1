@@ -16,6 +16,9 @@
     // PhoneGap is ready to be used!
     function onDeviceReady()
     {
+    	$(document).ready(function(){
+        	alert("Jquery Loaded");
+        });
         //menuDiv = document.querySelector("#footernav2");
         document.addEventListener("online", onOnline, false);
         document.addEventListener("menubutton", onExit, false);
@@ -32,10 +35,10 @@
     function onExit()
     {
       if(menuOpen) {
-			$("#footernav2").hide()//menuDiv.style.display="none";
+			$("div#footernav2").html("changed1")//menuDiv.style.display="none";
 			menuOpen = false;
 		} else {
-			$("#footernav2").show()//menuDiv.style.display="block";
+			$("div#footernav2").html("changed2")//menuDiv.style.display="block";
 			menuOpen = true;
 		}
         

@@ -16,7 +16,7 @@
     // PhoneGap is ready to be used!
     function onDeviceReady()
     {
-        menuDiv = document.querySelector("#footernav");
+        menuDiv = document.querySelector("#footernav2");
         document.addEventListener("online", onOnline, false);
         document.addEventListener("menubutton", onExit, false);
         pictureSource=navigator.camera.PictureSourceType;
@@ -32,10 +32,10 @@
     function onExit()
     {
       if(menuOpen) {
-			menuDiv.style.display="none";
+			menuDiv.hide()//menuDiv.style.display="none";
 			menuOpen = false;
 		} else {
-			menuDiv.style.display="block";
+			menuDiv.show()//menuDiv.style.display="block";
 			menuOpen = true;
 		}
         

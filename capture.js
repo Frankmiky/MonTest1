@@ -1,4 +1,4 @@
-  var pictureSource;   // picture source
+    var pictureSource;   // picture source
     var destinationType;// sets the format of returned value 
     var picturesStore; // contain all the pictures for app
     
@@ -16,7 +16,7 @@
     // PhoneGap is ready to be used!
     function onDeviceReady()
     {
-        menuDiv = document.querySelector("#menu");
+        menuDiv = document.querySelector("#footernav");
         document.addEventListener("online", onOnline, false);
         document.addEventListener("menubutton", onExit, false);
         pictureSource=navigator.camera.PictureSourceType;

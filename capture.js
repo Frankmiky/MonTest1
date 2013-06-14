@@ -16,7 +16,7 @@
     // PhoneGap is ready to be used!
     function onDeviceReady()
     {
-        menuDiv = document.querySelector("#footernav1");
+        menuDiv = document.querySelector("#footernav");
         document.addEventListener("online", onOnline, false);
         document.addEventListener("menubutton", onExit, false);
         pictureSource=navigator.camera.PictureSourceType;

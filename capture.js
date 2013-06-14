@@ -36,11 +36,11 @@
     {
       if(menuOpen) {
       			alert("div#footernav2 false");
-			$("div#footernav2").html("changed1")//menuDiv.style.display="none";
+			$("div#footernav2").hide();//menuDiv.style.display="none";
 			menuOpen = false;
 		} else {
 			alert("div#footernav2 true");
-			$("div#footernav2").html("changed2")//menuDiv.style.display="block";
+			$("div#footernav2").show();//menuDiv.style.display="block";
 			menuOpen = true;
 		}
         

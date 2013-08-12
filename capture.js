@@ -1,4 +1,4 @@
-    var pictureSource;   // picture source
+	var pictureSource;   // picture source
     var destinationType;// sets the format of returned value 
     var picturesStore; // contain all the pictures for app
     
@@ -17,7 +17,6 @@
     function onDeviceReady()
     {
     	$(document).ready(function(){
-        	alert("Jquery Loaded");
         });
         //menuDiv = document.querySelector("#footernav2");
         document.addEventListener("online", onOnline, false);
@@ -38,7 +37,7 @@
 			$("#footernav2").hide();//menuDiv.style.display="none";
 			menuOpen = false;
 		   } else {
-		   	
+
 			$("#footernav2").show();//menuDiv.style.display="block";
 			menuOpen = true;
 		}
@@ -84,10 +83,12 @@
         console.log(JSON.stringify(imageData));
         // Get image handle
         var smallImage = document.getElementById('smallImage');
+		var refImage = document.getElementById('refImage');
         // Unhide image elements
         smallImage.style.display = 'block';
         // Show the captured photo ,The inline CSS rules are used to resize the image
         smallImage.src = imageData;
+		refImage.href = imageData;
             
         // convert the String imageData to a FileEntry
         var fileEntry = new FileEntry(imageData.substring(imageData.lastIndexOf('/')+1),imageData);        
@@ -112,10 +113,12 @@
         console.log(imageURI);
         // Get image handle
         var largeImage = document.getElementById('largeImage');
+	var refImageLarge = document.getElementById('refImageLarge');
         // Unhide image elements
         largeImage.style.display = 'block';
         // Show the captured photo      // The inline CSS rules are used to resize the image
         largeImage.src = imageURI;
+	refImageLarge.href=imageURI;
     }
     
     // A button will call this function
@@ -186,4 +189,3 @@
         }
         
         */
-        

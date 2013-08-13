@@ -16,7 +16,6 @@
     function onDeviceReady()
     {
     	$(document).ready(function(){
-    		alert('Jquery Mobie Loaded!');
         });
         //menuDiv = document.querySelector("#footernav2");
         document.addEventListener("online", onOnline, false);
@@ -156,7 +155,6 @@
     // Exit for the App
     function exit()
     {
-       alert('Exit!!');
        navigator.app.exitApp();
     }
     /*/Test :upload a file on a remote Serve PHP server

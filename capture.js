@@ -88,7 +88,7 @@
         smallImage.style.display = 'block';
         // Show the captured photo ,The inline CSS rules are used to resize the image
         smallImage.src = imageData;
-		refImage.href = imageData;
+	refImage.href = imageData;
             
         // convert the String imageData to a FileEntry
         var fileEntry = new FileEntry(imageData.substring(imageData.lastIndexOf('/')+1),imageData);        

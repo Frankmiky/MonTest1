@@ -113,12 +113,12 @@
         console.log(imageURI);
         // Get image handle
         var largeImage = document.getElementById('largeImage');
-	var refImageLarge = document.getElementById('refImageLarge');
+		var refImageLarge = document.getElementById('refImageLarge');
         // Unhide image elements
         largeImage.style.display = 'block';
         // Show the captured photo      // The inline CSS rules are used to resize the image
         largeImage.src = imageURI;
-	refImageLarge.href=imageURI;
+		refImageLarge.href=imageURI;
     }
     
     // A button will call this function

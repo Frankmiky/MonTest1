@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Icloud</title>
-    	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"/>
-    	<script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
-    	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <title>iCloud</title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"/>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="capture.js"></script>
-    	<!--link rel="stylesheet" type="text/css" href="style.css"/-->
+	<script src="lightbox/js/jquery-1.10.2.min.js"></script>
+	<script src="lightbox/js/lightbox-2.6.min.js"></script>
+	<link href="lightbox/css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
  
   <body>
-   <!-- menÃ¼ Seite -->
+   <!-- menü Seite -->
 	<div data-role="page" id="menue">
   
 		<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
@@ -26,8 +29,10 @@
 			    <li><a href="#" onclick="getPhoto(pictureSource.PHOTOLIBRARY);" rel="external">Bilder aus der Album..</a></li>
 			    <li><a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">Alle Bilder sehen </a></li>
 			</ul>
-      		<img style="display:none;width:100px;height:100px;" id="smallImage" src="" />
-      		<img style="display:none;" id="largeImage" src="" />
+			<div class="img">
+				<!--a href="Bilder/images3.jpg"><img style="width:100px;height:100px;" id="smallImage" src="Bilder/images3.jpg" ></a-->
+				<a href="Bilder/images3.jpg"  rel="lightbox[plants]" id ="refImage" title="Click on image to move forward."><img id="smallImage" src="Bilder/images2.jpg" width="100";height="100" /></a>				
+			</div>
 		</div>	
 
 		<div data-role="footer" id="footernav2" data-id="footernav" data-tap-toggle="true" data-position="fixed" data-theme="b">

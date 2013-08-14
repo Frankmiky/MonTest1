@@ -52,6 +52,7 @@
     function onGetDirectorySuccess(dir)
     { 
         picturesStore = dir;
+        alert('Created dir'+dir);
         console.log("Created dir "+dir.name);
     } 
     
@@ -79,23 +80,25 @@
         var d = new Date();
         date=""+d.getDate()+"-"+ (d.getMonth()+1) +"-"+d.getFullYear()+"-"+ d.getHours()+"-"+d.getMinutes()+"-"+d.getSeconds();
         // Get image handle
+        alert('Date:'+date);
         console.log(JSON.stringify(imageData));
         // Get image handle
         var smallImage = document.getElementById('smallImage');
-		var refImage = document.getElementById('refImage');
         // Unhide image elements
         smallImage.style.display = 'block';
         // Show the captured photo ,The inline CSS rules are used to resize the image
         smallImage.src = imageData;
-	refImage.href = imageData;
+        alert('imageData:'+imageData);
             
         // convert the String imageData to a FileEntry
         var fileEntry = new FileEntry(imageData.substring(imageData.lastIndexOf('/')+1),imageData);        
         fileEntry.copyTo(picturesStore,date.toString()+".jpg",successCallback,failCallback);
+        alert('FileEntry:'+fileEntry);
         
         //call back functions
         function successCallback(entry) 
         {
+       	    alert('FileEntry copied!!');
             console.log("New Path: " + entry.fullPath);
         }
         
@@ -112,12 +115,10 @@
         console.log(imageURI);
         // Get image handle
         var largeImage = document.getElementById('largeImage');
-		var refImageLarge = document.getElementById('refImageLarge');
         // Unhide image elements
         largeImage.style.display = 'block';
         // Show the captured photo      // The inline CSS rules are used to resize the image
         largeImage.src = imageURI;
-		refImageLarge.href=imageURI;
     }
     
     // A button will call this function

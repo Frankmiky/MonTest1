@@ -52,7 +52,6 @@
     function onGetDirectorySuccess(dir)
     { 
         picturesStore = dir;
-        alert('Created dir'+dir);
         console.log("Created dir "+dir.name);
     } 
     
@@ -80,7 +79,6 @@
         var d = new Date();
         date=""+d.getDate()+"-"+ (d.getMonth()+1) +"-"+d.getFullYear()+"-"+ d.getHours()+"-"+d.getMinutes()+"-"+d.getSeconds();
         // Get image handle
-        alert('Date:'+date);
         console.log(JSON.stringify(imageData));
         // Get image handle
         var smallImage = document.getElementById('smallImage');
@@ -88,12 +86,10 @@
         smallImage.style.display = 'block';
         // Show the captured photo ,The inline CSS rules are used to resize the image
         smallImage.src = imageData;
-        alert('imageData:'+imageData);
             
         // convert the String imageData to a FileEntry
         var fileEntry = new FileEntry(imageData.substring(imageData.lastIndexOf('/')+1),imageData);        
         fileEntry.copyTo(picturesStore,date.toString()+".jpg",successCallback,failCallback);
-        alert('FileEntry:'+fileEntry);
         
         //call back functions
         function successCallback(entry) 

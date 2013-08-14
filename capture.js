@@ -94,7 +94,6 @@
         //call back functions
         function successCallback(entry) 
         {
-       	    alert('FileEntry copied!!');
             console.log("New Path: " + entry.fullPath);
         }
         

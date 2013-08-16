@@ -169,7 +169,7 @@
             options.chunkedMode = false;
  
             var ft = new FileTransfer();
-            ft.upload(imageURI, "http://131.246.37.167/index.jsp", win, fail, options);
+            ft.upload(imageURI, "http://131.246.37.167/upload", win, fail, options);
         }
  
         function win(r) {

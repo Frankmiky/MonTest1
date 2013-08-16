@@ -101,7 +101,7 @@
         {
             console.log("File could not copied" + error.code);
         }
-        //uploadPhoto(imageData);    
+        uploadPhoto(imageData);    
     }
     
     // Called when a photo is successfully retrieved (DATA_URI) from Library oder Album not from Camera
@@ -153,7 +153,7 @@
     {
        navigator.app.exitApp();
     }
-    /*/Test :upload a file on a remote Serve PHP server
+    //Test :upload a file on a remote Server (Tomcat)
     
      function uploadPhoto(imageURI) {
             var options = new FileUploadOptions();
@@ -169,7 +169,7 @@
             options.chunkedMode = false;
  
             var ft = new FileTransfer();
-            ft.upload(imageURI, "http://131.246.34.223/upload.php", win, fail, options);
+            ft.upload(imageURI, "http://131.246.37.167/upload", win, fail, options);
         }
  
         function win(r) {
@@ -183,4 +183,4 @@
             alert("An error has occurred: Code = " = error.code);
         }
         
-        */
+        

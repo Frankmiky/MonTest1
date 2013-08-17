@@ -107,6 +107,7 @@
     // Called when a photo is successfully retrieved (DATA_URI) from Library oder Album not from Camera
     function onPhotoURISuccess(imageURI) 
     {
+    	alert('largeImage!!!!');
         console.log(imageURI);
         // Get image handle
         var largeImage = document.getElementById('largeImage');

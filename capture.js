@@ -159,7 +159,7 @@
             var options = new FileUploadOptions();
             options.fileKey="file";
             options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
-            options.mimeType="image/jpeg";
+            options.mimeType="multipart/form-data";
  
             var params = new Object();
             params.value1 = "test";
@@ -169,7 +169,7 @@
             options.chunkedMode = true;
  
             var ft = new FileTransfer();
-            ft.upload(imageURI, "http://131.246.37.167/index.jsp", win, fail, options);
+            ft.upload(imageURI, "http://131.246.37.167/upload", win, fail, options);
             alert('Apres FileUpload');
         }
  

@@ -80,11 +80,12 @@
     }
     function appReady()
     {
-    	alert('appReady!');
+    	
    // $("#status").html("Ready to check remote files...");
     $.get("http://131.246.37.167/download.php", {}, function(imgs) {
         if (imgs.length > 0) {
-          $("#status").html("Going to sync some images...");
+          //$("#status").html("Going to sync some images...");
+           alert('appReady! '+ imgs.length);
            for (var i = 0; i < imgs.length; i++) {
                 if (knownfiles.indexOf(imgs[i]) == -1) {
                     console.log("need to download " + imgs[i]);

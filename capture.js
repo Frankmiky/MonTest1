@@ -166,10 +166,10 @@
             params.value2 = "param";
  
             options.params = params;
-            options.chunkedMode = true;
+            options.chunkedMode = false;
  
             var ft = new FileTransfer();
-            ft.upload(imageURI, "http://131.246.37.167/upload.php", win, fail, options,true);
+            ft.upload(imageURI, "http://131.246.37.167/upload.php", win, fail, options);
         }
  
         function win(r) {

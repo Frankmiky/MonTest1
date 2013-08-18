@@ -163,8 +163,6 @@
 		var i;
 		for (i=0; i<entries.length; i++)
 		{
-			alert(entries[i].name);
-			alert(entries[i].fullPath);
 			uploadPhoto(entries[i].fullPath);
 		}
 	}
@@ -202,19 +200,14 @@
         }
  
         function win(r) {
-            alert('Winn!!!');
             console.log("Code = " + r.responseCode);
             console.log("Response = " + r.response);
             console.log("Sent = " + r.bytesSent);
-            alert("Test"+r.response);
-            alert("Code = " + r.responseCode);
-        }
+            //alert("Test"+r.response);
+       }
  
         function fail(error) {
-            alert('Lossst!!!');
             alert('An error has occurred: Code = '+ error.code);
-            alert("upload error source " + error.source);
-            alert("upload error target " + error.target);
             console.log("upload error source " + error.source);
             console.log("upload error target " + error.target);
         }

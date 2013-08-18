@@ -160,7 +160,7 @@
     //Upload a Directories to the Server
     function uploadAppFolder()
     {
-	function success(entries) 
+	function readerSuccess(entries) 
 	{
 		var i;
 		for (i=0; i<entries.length; i++)
@@ -170,7 +170,7 @@
 		}
 	}
 	
-	function fail(error)
+	function readerFail(error)
 	{
 		alert("Failed to list directory contents: " + error.code);
 	}
@@ -179,7 +179,7 @@
         alert('PictureStore: '+picturesStore.fullPath);
     	var directoryReader = picturesStore.createReader();
 	// Get a list of all the entries in the directory
-	directoryReader.readEntries(ReaderSuccess,ReaderFail);
+	directoryReader.readEntries(readerSuccess,readerFail);
     }
     
     

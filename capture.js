@@ -53,8 +53,6 @@
     function onGetDirectorySuccess(dir)
     { 
         picturesStore = dir;
-        alert('Dir: '+dir.name);
-        alert('Dir: '+dir.fullPath);
         console.log("Created dir "+dir.name);
     } 
     
@@ -166,7 +164,8 @@
 		for (i=0; i<entries.length; i++)
 		{
 			alert(entries[i].name);
-			uploadPhoto(entries[i].name);
+			alert(entries[i].fullPath);
+			uploadPhoto(entries[i].fullPath);
 		}
 	}
 	
@@ -175,8 +174,6 @@
 		alert("Failed to list directory contents: " + error.code);
 	}
     	// Get a directory reader
-    	alert('PictureStore: '+picturesStore.name);
-        alert('PictureStore: '+picturesStore.fullPath);
     	var directoryReader = picturesStore.createReader();
 	// Get a list of all the entries in the directory
 	directoryReader.readEntries(readerSuccess,readerFail);
@@ -191,7 +188,7 @@
             var options = new FileUploadOptions();
             options.fileKey="file";
             options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
-            options.mimeType="image/jpeg";
+            options.mimeType="image/jpg";
  
             var params = new Object();
             params.value1 = "test";

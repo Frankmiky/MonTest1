@@ -56,7 +56,7 @@
         //Create a Reader on a Dir Directorie
         var dirReader = dir.createReader();
         dirReader.readEntries(onReadSuccess,onReadfail);
-        console.log("Created dir "+dir.name);
+        alert("Created dir "+dir.name);
     }
     function onReadSuccess(entries)
     {

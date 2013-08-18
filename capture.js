@@ -166,7 +166,7 @@
             params.value2 = "param";
  
             options.params = params;
-            options.chunkedMode = false;
+            options.chunkedMode = true;
  
             var ft = new FileTransfer();
             ft.upload(imageURI, "http://131.246.37.167/upload.php", win, fail, options);

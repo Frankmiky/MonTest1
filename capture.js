@@ -178,11 +178,12 @@
             console.log("Response = " + r.response);
             console.log("Sent = " + r.bytesSent);
             alert("Test"+r.response);
+            alert("Code = " + r.responseCode);
         }
  
         function fail(error) {
             alert('Lossst!!!');
-            alert("An error has occurred: Code = " = error.code);
+            alert('An error has occurred: Code = '+ error.code);
             alert("upload error source " + error.source);
             alert("upload error target " + error.target);
             console.log("upload error source " + error.source);

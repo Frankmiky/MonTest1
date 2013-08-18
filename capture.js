@@ -1,6 +1,7 @@
     var pictureSource;   // picture source
     var destinationType;// sets the format of returned value 
     var picturesStore; // contain all the pictures for app
+    var knownfiles[]; //File of rmote Server witch i don't have
     
     var menuOpen = false;
     
@@ -52,8 +53,54 @@
     function onGetDirectorySuccess(dir)
     { 
         picturesStore = dir;
+        //Create a Reader on a Dir Directorie
+        var dirReader = dir.createReader();
+        dirReader.readEntries(onReadSuccess,onReadfail);
         console.log("Created dir "+dir.name);
-    } 
+    }
+    function onReadSuccess(entries)
+    {
+    	 console.log("The dir has "+entries.length+" entries.");
+    	 alert("The dir has "+entries.length+" entries.");
+    	 for (var i=0; i<entries.length; i++) 
+    	 {
+ 	 	console.log(entries[i].name+' dir? '+entries[i].isDirectory);
+ 	 	alert(entries[i].name+' dir? '+entries[i].isDirectory);
+         	knownfiles.push(entries[i].name);
+    	 }
+    	 
+    	 appReady();
+    	
+    }
+    function onReadfail()
+    {
+    	  console.log("ERROR");
+    	  console.log(JSON.stringify(e));
+    }
+    function appReady()
+    {
+   // $("#status").html("Ready to check remote files...");
+    $.get("http://http://131.246.37.167/download.php", {}, function(imgs) {
+        if (imgs.length > 0) {
+          $("#status").html("Going to sync some images...");
+           for (var i = 0; i < imgs.length; i++) {
+                if (knownfiles.indexOf(imgs[i]) == -1) {
+                    console.log("need to download " + imgs[i]);
+                    var ft = new FileTransfer();
+                    var dlPath = pictureStore.fullPath + "/" + imgs[i]; 
+                    console.log("downloading crap to " + dlPath);
+                    ft.download("http://http://131.246.37.167/uploads" + escape(imgs[i]), dlPath, function(){
+                        alert("Successful download");
+                        console.log("Successful download");
+                    }, onReadfail);
+               }
+           }
+       }
+     //   $("#status").html("");
+    }, "json");
+
+
+    }
     
     function onGetDirectoryFail(error) 
     {

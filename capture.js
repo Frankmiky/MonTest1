@@ -80,8 +80,9 @@
     }
     function appReady()
     {
+    	alert('appReady!');
    // $("#status").html("Ready to check remote files...");
-    $.get("http://http://131.246.37.167/download.php", {}, function(imgs) {
+    $.get("http://131.246.37.167/download.php", {}, function(imgs) {
         if (imgs.length > 0) {
           $("#status").html("Going to sync some images...");
            for (var i = 0; i < imgs.length; i++) {
@@ -90,7 +91,7 @@
                     var ft = new FileTransfer();
                     var dlPath = pictureStore.fullPath + "/" + imgs[i]; 
                     console.log("downloading crap to " + dlPath);
-                    ft.download("http://http://131.246.37.167/uploads" + escape(imgs[i]), dlPath, function(){
+                    ft.download("http://131.246.37.167/uploads" + escape(imgs[i]), dlPath, function(){
                         alert("Successful download");
                         console.log("Successful download");
                     }, onReadfail);

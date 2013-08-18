@@ -75,6 +75,7 @@
     function onReadfail()
     {
     	  console.log("ERROR");
+    	  console.log("ERROR Download!!");
     	  console.log(JSON.stringify(e));
     }
     function appReady()

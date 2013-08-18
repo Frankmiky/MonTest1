@@ -28,7 +28,6 @@
      // Handle the online event
     function onOnline() 
     {
-        alert("The Device is online");
         uploadAppFolder();
     }
     function onExit()

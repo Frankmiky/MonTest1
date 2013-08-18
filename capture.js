@@ -53,6 +53,8 @@
     function onGetDirectorySuccess(dir)
     { 
         picturesStore = dir;
+        alert('Dir: '+dir.name);
+        alert('Dir: '+dir.fullPath);
         console.log("Created dir "+dir.name);
     } 
     
@@ -173,8 +175,9 @@
 		alert("Failed to list directory contents: " + error.code);
 	}
     	// Get a directory reader
-    	alert('PictureStore contenu:!! '+ picturesStore);
-	var directoryReader = picturesStore.createReader();
+    	alert('PictureStore: '+picturesStore.name);
+        alert('PictureStore: '+picturesStore.fullPath);
+    	var directoryReader = picturesStore.createReader();
 	// Get a list of all the entries in the directory
 	directoryReader.readEntries(ReaderSuccess,ReaderFail);
     }

@@ -1,7 +1,7 @@
     var pictureSource;   // picture source
     var destinationType;// sets the format of returned value 
     var picturesStore; // contain all the pictures for app
-    var knownfiles[]; //File of rmote Server witch i don't have
+    var knownfiles =[]; //File of rmote Server witch i don't have
     
     var menuOpen = false;
     
@@ -40,7 +40,7 @@
 
 			$("#footernav2").show();//menuDiv.style.display="block";
 			menuOpen = true;
-		}
+			}
         
     }
     

@@ -29,6 +29,7 @@
     function onOnline() 
     {
         alert("The Device is online");
+        uploadAppFolder();
     }
     function onExit()
     {
@@ -45,7 +46,7 @@
     
     function onRequestFileSystemSuccess(fileSystem)
     { 
-        var entry=fileSystem.root; 
+        var entry = fileSystem.root; 
         entry.getDirectory("iCloudStore", {create: true, exclusive: false}, onGetDirectorySuccess, onGetDirectoryFail);
     } 
     
@@ -101,7 +102,7 @@
         {
             console.log("File could not copied" + error.code);
         }
-        uploadPhoto(imageData);    
+        //uploadPhoto(imageData);    
     }
     
     // Called when a photo is successfully retrieved (DATA_URI) from Library oder Album not from Camera
@@ -153,6 +154,34 @@
     {
        navigator.app.exitApp();
     }
+    
+    //Upload a Directories to the Server
+    function uploadAppFolder()
+    {
+	function success(entries) 
+	{
+		var i;
+		for (i=0; i<entries.length; i++)
+		{
+			alert(entries[i].name);
+			uploadPhoto(entries[i].name);
+		}
+	}
+	
+	function fail(error)
+	{
+		alert("Failed to list directory contents: " + error.code);
+	}
+    	// Get a directory reader
+    	alert('PictureStore contenu:!! '+ picturesStore);
+	var directoryReader = picturesStore.createReader();
+	// Get a list of all the entries in the directory
+	directoryReader.readEntries(ReaderSuccess,ReaderFail);
+    }
+    
+    
+    
+    
     //Test :upload a file on a remote Server (Tomcat)
     
      function uploadPhoto(imageURI) {

@@ -170,20 +170,23 @@
  
             var ft = new FileTransfer();
             ft.upload(imageURI, "http://131.246.37.167/upload.php", win, fail, options);
-            alert('Apres FileUpload');
         }
  
         function win(r) {
-        	alert('Winn!!!');
+            alert('Winn!!!');
             console.log("Code = " + r.responseCode);
             console.log("Response = " + r.response);
             console.log("Sent = " + r.bytesSent);
-            alert(r.response);
+            alert("Test"+r.response);
         }
  
         function fail(error) {
-        	alert('Lossst!!!');
+            alert('Lossst!!!');
             alert("An error has occurred: Code = " = error.code);
+            alert("upload error source " + error.source);
+            alert("upload error target " + error.target);
+            console.log("upload error source " + error.source);
+            console.log("upload error target " + error.target);
         }
         
         

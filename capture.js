@@ -79,7 +79,7 @@
     	  console.log(JSON.stringify(e));
     }
     function appReady()
-    {
+    { /*
     	 alert("Ready! Avant $get!");
     	 $.get("http://131.246.37.167/test.php",{ name: "Zara" },function(data) {
     	 	for (var i = 0; i < data.length; i++) {
@@ -87,14 +87,9 @@
     	 	}
     	 },"json" );	
     	 alert("Ready! apres $get!");
+    	*/
     	
-    	
-    	
-    	
-    	
-    	
-    	
-   /*/ $("#status").html("Ready to check remote files...");
+    // $("#status").html("Ready to check remote files...");
     $.get("http://131.246.37.167/download.php", {}, function(imgs) {
         if (imgs.length > 0) {
           //$("#status").html("Going to sync some images...");
@@ -102,10 +97,13 @@
            for (var i = 0; i < imgs.length; i++) {
                 if (knownfiles.indexOf(imgs[i]) == -1) {
                     console.log("need to download " + imgs[i]);
+                    var fileName = imgs[i].substr(imgs[i].lastIndexOf('/')+1);
+                    alert('fileName: '+fileName);
                     var ft = new FileTransfer();
-                    var dlPath = pictureStore.fullPath + "/" + imgs[i]; 
+                    var dlPath = pictureStore.fullPath + "/" + fileName; 
+                    alert('fullPath on Device: '+dlPath);
                     console.log("downloading crap to " + dlPath);
-                    ft.download("http://131.246.37.167/uploads" + escape(imgs[i]), dlPath, function(){
+                    ft.download("http://131.246.37.167/uploads" + escape(fileName), dlPath, function(){
                         alert("Successful download");
                         console.log("Successful download");
                     }, onReadfail);

@@ -85,7 +85,7 @@
     	 	for (var i = 0; i < data.length; i++) {
     	 		alert(data[i]);
     	 	}
-    	 } );	
+    	 },"json" );	
     	 alert("Ready! apres $get!");
     	
     	

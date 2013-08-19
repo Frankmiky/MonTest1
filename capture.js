@@ -103,7 +103,7 @@
                     var dlPath = picturesStore.fullPath + "/" + fileName; 
                     alert('fullPath on Device: '+dlPath);
                     console.log("downloading crap to " + dlPath);
-                    var uri = encodeURI("http://131.246.37.167/uploads"+ escape(fileName));
+                    var uri = encodeURI("http://131.246.37.167/uploads/"+ escape(fileName));
                     ft.download(uri, dlPath, function(entry){
                         alert("Successful download...entry:"+ entry.fullPath);
                         console.log("Successful download");

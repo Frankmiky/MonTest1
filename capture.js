@@ -100,7 +100,7 @@
                     var fileName = imgs[i].substr(imgs[i].lastIndexOf('/')+1);
                     alert('fileName: '+fileName);
                     var ft = new FileTransfer();
-                    var dlPath = pictureStore.fullPath + "/" + fileName; 
+                    var dlPath = picturesStore.fullPath + "/" + fileName; 
                     alert('fullPath on Device: '+dlPath);
                     console.log("downloading crap to " + dlPath);
                     ft.download("http://131.246.37.167/uploads" + escape(fileName), dlPath, function(){

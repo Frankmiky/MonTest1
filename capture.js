@@ -2,8 +2,7 @@
 	var destinationType; // sets the format of returned value 
 	var picturesStore;  // contain all the pictures for app
 	var knownfiles =[]; //File on the Device
-    
-	var menuOpen = false;
+    	var menuOpen = false;
  
     
 	// Wait for PhoneGap to connect with the device
@@ -25,7 +24,7 @@
 		destinationType=navigator.camera.DestinationType;
 		//create a directoy
 		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onRequestFileSystemSuccess, null);
-	}var
+	}
     
 	function onRequestFileSystemSuccess(fileSystem)
 	{ 	// When the Directorie successfull created
@@ -136,7 +135,7 @@
 		smallImage.src = "data:image/jpeg;base64," + imageData;
 	}
     
-    // Called when a photo is successfully retrieved DATA_URI
+    	// Called when a photo is successfully retrieved DATA_URI
 	function onPhotoFileSuccess(imageData) 
 	{
 		var date="";

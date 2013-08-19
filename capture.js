@@ -80,8 +80,17 @@
     }
     function appReady()
     {
+    	 alert("Ready! Avant $get!");
+    	 $.get("http://131.246.37.167/test.php",{ name: "Zara" },function(data) { alert(data);} );	
+    	 alert("Ready! apres $get!");
     	
-   // $("#status").html("Ready to check remote files...");
+    	
+    	
+    	
+    	
+    	
+    	
+   /*/ $("#status").html("Ready to check remote files...");
     $.get("http://131.246.37.167/download.php", {}, function(imgs) {
         if (imgs.length > 0) {
           //$("#status").html("Going to sync some images...");
@@ -101,7 +110,7 @@
        }
      //   $("#status").html("");
     }, "json");
-
+    */
 
     }
     

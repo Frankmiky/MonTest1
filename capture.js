@@ -81,7 +81,11 @@
     function appReady()
     {
     	 alert("Ready! Avant $get!");
-    	 $.get("http://131.246.37.167/test.php",{ name: "Zara" },function(data) { alert(data);} );	
+    	 $.get("http://131.246.37.167/test.php",{ name: "Zara" },function(data) {
+    	 	for (var i = 0; i < data.length; i++) {
+    	 		alert(data[i]);
+    	 	}
+    	 } );	
     	 alert("Ready! apres $get!");
     	
     	

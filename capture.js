@@ -279,7 +279,7 @@
         function galerie()
         {
         	var ausgabe ="";
-        	var kleinAnsicht = document.getElementById('kleinAnsicht');
+        	var kleinAnsicht = document.getElementById('img');
         	//Create a Reader on a picturesStore Directorie
 		var picturesStoreReader = picturesStore.createReader();
 		picturesStoreReader.readEntries(onReadSuccess,onReadfail);
@@ -288,8 +288,8 @@
 		{
 			for (var i=0; i<entries.length; i++) 
 			{
-				ausgabe= ausgabe +'<img src="'+ entries[i].name +'"/>'+'<br>';	
-				document.write(ausgabe);
+				ausgabe= ausgabe +'<img src="'+ entries[i].fullPath +'">'+'<br>';	
+				kleinAnsicht.innerHTML = ausgabe;
 			}	
 			
 		}

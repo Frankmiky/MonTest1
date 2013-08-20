@@ -1,2 +1,37 @@
-iCloud_v1
-=========
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Icloud</title>
+      <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"/>
+    	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    	<script type="text/javascript" charset="utf-8" src="capture.js"></script>
+    	<!--link rel="stylesheet" type="text/css" href="style.css"/-->
+  </head>
+ 
+  <body>
+   <!-- Hilfe Seite -->
+	<div data-role="page" id="bildergalerie" data-add-back-btn="true" data-back-btn-text="Zur�ck">
+  
+		<div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+				<h1>Bildergalerie</h1>
+		</div>
+    
+		<div data-role="content">
+			<div id= "kleinAnsicht"> <img src=""></div>
+		</div>	
+
+		<div data-role="footer" data-id="footernav" data-tap-toggle="true" data-position="fixed" data-theme="b">
+			<div data-role="navbar" data-theme="b">
+
+				<ul>    
+					<li><a href="index.html" data-iconpos="left" data-icon="home" data-transition="fade" data-role="button">HOME</a></li>
+					<li><a href="menue.html" data-iconpos="left" data-icon="info" data-transition="fade" data-role="button">MENUE</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+  </body>
+</html>

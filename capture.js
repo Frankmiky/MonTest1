@@ -279,7 +279,7 @@
         function galerie()
         {
         	var ausgabe ="";
-        	var kleinAnsicht = document.getElementById('img');
+        	var kleinAnsicht = document.getElementById('imgs');
         	//Create a Reader on a picturesStore Directorie
 		var picturesStoreReader = picturesStore.createReader();
 		picturesStoreReader.readEntries(onReadSuccess,onReadfail);
@@ -288,7 +288,7 @@
 		{
 			for (var i=0; i<entries.length; i++) 
 			{
-				ausgabe= ausgabe +'<img style="display:none;width:10%;height:10%;border:6px solid #fff;box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.85);-webkit-transform:rotate( 0deg);"src="'+ entries[i].fullPath +'">'+'<br>';	
+				ausgabe= ausgabe +'<img style= display:none;width:10%;height:10%;border:6px solid #fff;box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.85);-webkit-transform:rotate( 0deg); src="'+ entries[i].fullPath +'">'+'<br>';	
 				kleinAnsicht.innerHTML = ausgabe;
 			}	
 			

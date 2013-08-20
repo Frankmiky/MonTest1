@@ -276,4 +276,28 @@
 		console.log("upload error target " + error.target);
 	}
         
+        function galerie()
+        {
+        	var ausgabe ="";
+        	var kleinAnsicht = document.getElementById('kleinAnsicht');
+        	//Create a Reader on a picturesStore Directorie
+		var picturesStoreReader = picturesStore.createReader();
+		picturesStoreReader.readEntries(onReadSuccess,onReadfail);
+		
+		function onReadSuccess(entries)
+		{
+			for (var i=0; i<entries.length; i++) 
+			{
+				ausgabe= ausgabe +'<img src="'+ entries[i].name +'"/>'+'<br>';	
+				document.write(ausgabe);
+			}	
+			
+		}
+		function onReadfail()
+		{
+			console.log("ERROR reading Files Galerie!!");
+			alert("ERROR reading Files Galerie!!");
+		}
+        	
+        }
         

@@ -279,7 +279,7 @@
         function galerie()
         {
         	var ausgabe ="";
-        	var kleinAnsicht = document.getElementById('imgs');
+        	var kleinAnsicht = document.getElementById('img');
         	//Create a Reader on a picturesStore Directorie
 		var picturesStoreReader = picturesStore.createReader();
 		picturesStoreReader.readEntries(onReadSuccess,onReadfail);

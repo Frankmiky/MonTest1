@@ -289,8 +289,8 @@
 			for (var i=0; i<entries.length; i++) 
 			{
 				ausgabe= ausgabe +'<img src="'+ entries[i].fullPath +'"  style="display:none;width:20%;height:auto;border:6px solid #fff;box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.85);-webkit-transform:rotate( 0deg);">';	
-				kleinAnsicht.innerHTML = ausgabe;
-				
+				//kleinAnsicht.innerHTML = ausgabe;
+				document.write(ausgabe);
 			}	
 			
 		}

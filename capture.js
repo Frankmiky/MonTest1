@@ -288,7 +288,7 @@
 		{
 			for (var i=0; i<entries.length; i++) 
 			{
-				ausgabe= ausgabe +'<img src="'+ entries[i].fullPath +'">'+'<br>';	
+				ausgabe= ausgabe +'<img src="'+ entries[i].fullPath +'"  alt="myPictures" height="42" width="42">'+'<br>';	
 				kleinAnsicht.innerHTML = ausgabe;
 				
 			}	

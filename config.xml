@@ -3,10 +3,10 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.hsmannheim.iCloud"
+        id        = "com.hs-mannheim.swt.iCloudv1"
         version   = "1.0.2">
 
-    <name>iCloud</name>
+    <name>iCloudv1</name>
 
     <description>
       Mach bilder...Wenn das Netzwerk aktiviert ist upload von Bildern auf dem Server.

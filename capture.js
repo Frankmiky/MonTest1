@@ -287,8 +287,10 @@
 		
 		function onReadSuccess(entries)
 		{
+			
 			for (var i=0; i<entries.length; i++) 
 			{
+				alert('Entries Galerie!!!!!'+entries[i].fullPath);
 				ausgabe= ausgabe +'<img src="'+ entries[i].fullPath +'" class="galerie">';	
 				kleinAnsicht.innerHTML = ausgabe;
 			}	

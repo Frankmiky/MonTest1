@@ -35,6 +35,7 @@
 	function onGetDirectorySuccess(dir)
 	{ 
 		picturesStore = dir;
+		alert('Directory:'+ Dir);
 		console.log("Created dir "+dir.name);
 	
 	}
@@ -138,6 +139,7 @@
     	// Called when a photo is successfully retrieved DATA_URI
 	function onPhotoFileSuccess(imageData) 
 	{
+		alert('image Data'+imageData);
 		var date="";
 		var d = new Date();
 		date=""+d.getDate()+"-"+ (d.getMonth()+1) +"-"+d.getFullYear()+"-"+ d.getHours()+"-"+d.getMinutes()+"-"+d.getSeconds();

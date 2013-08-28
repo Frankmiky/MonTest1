@@ -94,7 +94,7 @@
 	function downloadReady()
 	{ 
 		// $("#status").html("Ready to check remote files...");
-		$.get("http://131.246.37.167/download.php", {},picturesArray, "json");
+		$.get("http://192.168.0.25/download.php", {},picturesArray, "json");
 		
 		function picturesArray(imgs)
 		{ 
@@ -259,7 +259,7 @@
 		options.chunkedMode = false;
 		
 		var ft = new FileTransfer();
-		ft.upload(imageURI, "http://131.246.37.167/upload.php", win, fail, options,true);
+		ft.upload(imageURI, "http://192.168.0.25/upload.php", win, fail, options,true);
 	}
 	 
 	function win(r) 

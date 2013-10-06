@@ -273,7 +273,7 @@
 	
 	function fail(error) 
 	{
-		alert('An error has occurred: Code = '+ error.code);
+		//alert('An error has occurred: Code = '+ error.code);
 		console.log("upload error source " + error.source);
 		console.log("upload error target " + error.target);
 	}
@@ -291,7 +291,7 @@
 			
 			for (var i=0; i<entries.length; i++) 
 			{
-				alert('Entries Galerie!!!!!'+entries[i].fullPath);
+				//alert('Entries Galerie!!!!!'+entries[i].fullPath);
 				ausgabe= ausgabe +'<img src="'+ entries[i].fullPath +'" class="galerie">';	
 				kleinAnsicht.innerHTML = ausgabe;
 			}	
@@ -300,7 +300,7 @@
 		function onReadfail()
 		{
 			console.log("ERROR reading Files Galerie!!");
-			alert("ERROR reading Files Galerie!!");
+			//alert("ERROR reading Files Galerie!!");
 		}
         	
         }

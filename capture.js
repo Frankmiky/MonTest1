@@ -159,6 +159,7 @@
 		function successCallback(entry) 
 		{
 			console.log("New Path: " + entry.fullPath);
+			onOnline();
 		}
 		
 		function failCallback(error) 

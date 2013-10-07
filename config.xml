@@ -6,7 +6,7 @@
         id        = "com.hs-mannheim.swt.iCloudv1"
         version   = "1.0.2">
 
-    <name>iCloudv1</name>
+    <name>iCloud</name>
 
     <description>
       Mach bilder...Wenn das Netzwerk aktiviert ist upload von Bildern auf dem Server.

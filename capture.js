@@ -94,7 +94,7 @@
 	function downloadReady()
 	{ 
 		// $("#status").html("Ready to check remote files...");
-		$.get("http://192.168.0.14/download.php", {},picturesArray, "json");
+		$.get("http://141.19.176.62/download.php", {},picturesArray, "json");
 		
 		function picturesArray(imgs)
 		{ 
@@ -109,7 +109,7 @@
 						var fileName = imgs[i].substr(imgs[i].lastIndexOf('/')+1);
 						var ft = new FileTransfer();
 						var dlPath = picturesStore.fullPath + "/" + fileName; 
-						var uri = encodeURI("http://192.168.0.14/uploads/"+ escape(fileName));
+						var uri = encodeURI("http://141.19.176.62/uploads/"+ escape(fileName));
 						ft.download(uri, dlPath, function(entry){
 						console.log("Successful download");
 						}, onReadfail);
@@ -260,7 +260,7 @@
 		options.chunkedMode = false;
 		
 		var ft = new FileTransfer();
-		ft.upload(imageURI, "http://192.168.0.14/upload.php", win, fail, options,true);
+		ft.upload(imageURI, "http://141.19.176.62/upload.php", win, fail, options,true);
 	}
 	 
 	function win(r) 
